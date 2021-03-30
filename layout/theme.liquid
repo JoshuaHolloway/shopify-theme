@@ -49,10 +49,12 @@
     };
   </script>
 
-  <!-- JOSH: This is how script tags are included -->
-  {% include 'script-tags', layout: 'theme' %}
+
 
   {{ content_for_header }}
+
+  <!-- JOSH: This is how style tags are added -->
+  {{ 'app.css' | asset_url | stylesheet_tag }}
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -61,7 +63,7 @@
 
   {% section 'header' %}
 
-  <!-- JOSH: This is the element that is targeted by vue in /scr/js/app.js -->
+  <!-- JOSH: This is the element that is targeted by vue in /assets/app.js -->
   <main role="main" id="app">
     {{ content_for_layout }}
   </main>
@@ -70,7 +72,9 @@
 
   {% section 'footer' %}
 
+  <!-- JOSH: Import /assets/app.css -->
   {{ 'app.js' | asset_url | script_tag }}
+
 
 </body>
 </html>
