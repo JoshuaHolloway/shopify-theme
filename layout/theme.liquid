@@ -49,6 +49,7 @@
     };
   </script>
 
+  <!-- JOSH: This is how script tags are included -->
   {% include 'script-tags', layout: 'theme' %}
 
   {{ content_for_header }}
@@ -60,13 +61,16 @@
 
   {% section 'header' %}
 
-  <main role="main" id="MainContent">
+  <!-- JOSH: This is the element that is targeted by vue in /scr/js/app.js -->
+  <main role="main" id="app">
     {{ content_for_layout }}
   </main>
 
   <h1>TES JOSH 3-30</h1>
 
   {% section 'footer' %}
+
+  {{ 'app.js' | asset_url | script_tag }}
 
 </body>
 </html>
