@@ -57,18 +57,22 @@
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
 
-  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+  <!-- This comes from /config/settings_schema.json, this can be done in any file. -->
+  <!-- {{ settings.test_data }} -->
 
-  {% section 'header' %}
+
+  <!-- <a class="in-page-link sr-only" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a> -->
+
+  <!-- {% section 'header' %} -->
 
   <!-- JOSH: This is the element that is targeted by vue in /assets/app.js -->
-  <main role="main" id="app">
+  <!-- <main role="main" id="app">
     {{ content_for_layout }}
-  </main>
+  </main> -->
 
-  <h1>TES JOSH 3-30</h1>
+  <!-- <h1>TES JOSH 3-30</h1> -->
 
-  {% section 'footer' %}
+  <!-- {% section 'footer' %} -->
 
   <!-- JOSH: Import /assets/app.css -->
   {{ 'app.js' | asset_url | script_tag }}
