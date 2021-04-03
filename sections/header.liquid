@@ -11,36 +11,13 @@
   - Home page only: only shows on the home page
 {%- endcomment -%}
 <section data-section-id="{{ section.id }}" data-section-type="header">
-  {%- if section.settings.announcement_bar_enabled -%}
-    <div>
-      {%- if section.settings.announcement_bar_home_page_only == false or template.name == 'index' -%}
-        {%- if section.settings.announcement_bar_link != blank -%}
-          <a href="{{ section.settings.announcement_bar_link }}">
-            {{ section.settings.announcement_bar_text | escape }}
-          </a>
-        {%- else -%}
-          <p>{{ section.settings.announcement_bar_text | escape }}</p>
-        {%- endif -%}
-      {%- endif -%}
-    </div>
-  {%- endif -%}
 
-  <header role="banner">
+  <header>
     {% include 'navbar' %}
+
+   
   </header>
-
-
-
-
-
-
   
-
-
-
-
-
-
 
 </section>
 
@@ -48,7 +25,7 @@
   <style>
     .logo-image {
       display: block;
-      max-width: "{{ section.settings.logo_max_width }}px";
+      max-width: {{ section.settings.logo_max_width }}px;
     }
   </style>
 {% endif %}
@@ -98,11 +75,11 @@
         "type": "range",
         "id": "logo_max_width",
         "min": 20,
-        "max": 450,
-        "step": 10,
+        "max": 200,
+        "step": 2,
         "unit": "px",
         "label": "Custom logo width",
-        "default": 250
+        "default": 100
       },
       {
         "type": "link_list",

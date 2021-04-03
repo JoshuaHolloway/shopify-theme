@@ -1,7 +1,9 @@
+
 import Vue from "vue";
+
 import 'jquery';
+import 'popper.js';
+
 import 'bootstrap';
 
-const vm = new Vue({
-  el: "#app"
-});
+
