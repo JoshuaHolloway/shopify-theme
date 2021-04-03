@@ -156,5 +156,18 @@
         "info": "Will be scaled down to 32 x 32px"
       }
     ]
+  },
+  {
+    "name": "Josh settings_schema.json",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Mini Cart"
+      },
+      { "type": "text",
+        "id": "test_data",
+        "label": "Test Data"
+      }
+    ]
   }
 ]

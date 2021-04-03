@@ -1,0 +1,40 @@
+
+<h1 id="josh_h1">josh.liquid section</h1>
+<style>
+  #josh_h1 {
+    background: red;
+  }
+</style>
+
+<h3>
+  {{ section.settings.column_richtext }}
+</h3>
+
+<img src="{{ section.settings.user_img | img_url: '300x300'}}" alt="">
+
+
+<h5>
+  <p>Below is from the theme settings (settings_schema.json)</p>
+  <p>{{ settings.test_data }}</p>
+</h5>
+
+
+{% schema %}
+{
+  "name": "josh.liquid Image Picker",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "user_img",
+      "label": "Logo image"
+    },
+    {
+      "type": "richtext",
+      "id": "column_richtext",
+      "label": "text",
+      "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+    }
+  ]
+
+}
+{% endschema %}

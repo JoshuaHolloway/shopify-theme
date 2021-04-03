@@ -48,14 +48,14 @@
   <style>
     .logo-image {
       display: block;
-      max-width: {{ section.settings.logo_max_width }}px;
+      max-width: "{{ section.settings.logo_max_width }}px";
     }
   </style>
 {% endif %}
 
 {% schema %}
   {
-    "name": "Header2",
+    "name": "Header",
     "settings": [
       {
         "type": "header",
