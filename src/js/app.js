@@ -1,3 +1,4 @@
+
 import Vue from "vue";
 window.Vue = Vue;
 
@@ -11,6 +12,8 @@ window.jQuery = window.$ = jQuery;
 import 'popper.js';
 
 import 'bootstrap';
+
+window.Noty = require('noty');
 
 
 // Vue Components
